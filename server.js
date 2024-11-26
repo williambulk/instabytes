@@ -4,6 +4,9 @@ import routes from "./src/routes/posts-routes.js";
 // Cria uma instância do Express para iniciar a aplicação
 const app = express();
 
+// Servindo arquivos estáticos (pasta de Uploads)
+app.use(express.static("uploads"));
+
 // Executando a função routes passando o app
 routes(app);
 
